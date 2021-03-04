@@ -1,0 +1,75 @@
+﻿@import url('src/constants.less');
+
+
+
+
+
+
+ .menu-selected{
+     border-bottom:8px ridge @taro-red!important;
+ }
+ /*.menu-hovered{
+     border-bottom:8px ridge yellow;
+ }*/
+
+.navbar-nav{
+}
+
+
+.navbar{
+    .container{
+        border-right:2px outset rgba(243, 243, 243, .4)!important;
+        border-left:2px outset rgba(243, 243, 243, .4)!important;
+        border-bottom:2px outset rgba(243, 243, 243, .4)!important;
+    }
+}
+
+
+
+// Ensure the 'hamburger' menu is visable 
+ .icon-bar {
+    background-color: rgba(155, 36, 36, 0.616);
+    border-color:rgba(35, 165, 53, 0.616);
+    height: 20px;
+}
+
+.nav{
+    background-color:transparent;
+    margin-right:50px;     
+    font-size:15px;
+    font-weight:500;
+}
+
+.nav li>a{
+    // these two are for vertical centering
+    display: table-cell;
+    vertical-align: middle;
+   // padding:5px 0;
+    margin-left:0;
+    margin-right:0;
+    padding-left:4px;
+    padding-right:4px;
+    color:#000;
+    
+}
+.nav li{
+    list-style: none;
+    list-style-type: none;
+    // for vertical centering
+    display: table;
+ //   padding:0 5px 0 5px;
+    margin-right:15px;
+    color:#000;
+}
+.nav li:last-child {
+    a{
+        color:#efefef!important;
+       // padding:5px 9px;
+    }
+}
+
+.nav:hover,.nav li:hover, .nav a, .nav a:hover, .nav a:visited, .nav a::selection{
+ //   background-color:transparent;
+    color:#000;
+
+}

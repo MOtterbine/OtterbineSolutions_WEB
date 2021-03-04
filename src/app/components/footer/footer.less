@@ -1,0 +1,95 @@
+@import url('src/constants.less');
+
+ 
+/* CSS Document */
+@media screen 
+{
+    
+   footer{
+      z-index:99;
+      color: #dedede;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding:0;
+      margin:0;
+      background-color: @dark-background;
+   }
+ 
+
+
+   #footerarea 
+   {	
+      width:100%;
+    /*  height:@footer-height;    Height of the footer */
+      margin:0;
+      padding:0;
+   }
+   
+   .footerbackground 
+   {	
+  //    background-color:#000000;
+/*      background:#000000;
+      opacity:.6;
+*/   }
+   
+   .footertext 
+   {	
+      color: #FFFFFF; 
+      text-shadow: .05em .05em .05em #333;
+      opacity:1;
+   }
+   .footertext p
+   {
+      font-size:12px;
+      line-height:3em;
+      color:white;   
+      text-align:right;
+      margin:.33em 1.5em .33em .33em;
+   
+   }
+
+
+
+
+}
+/*********************** BOOTSTRAP SIZING *******************************************/
+
+/* XSmall */
+@media screen and (max-width: 450px) 
+{  
+/*   .footerarea { font-size:x-small;}
+   .footertext 
+   { 
+      font-size:x-small;
+   }
+   .footertext p 	{ font-size: 10px;} 
+*/   
+}
+
+/* Small */
+@media screen and (min-width: 451px) and (max-width: 849px) 
+{
+/*   .footerarea { font-size:small;}
+   .footertext { font-size:small;}
+   .footertext  p 	{ font-size: 12px;} 
+*/
+}
+
+/* Medium */
+@media screen and (min-width: 850px) and (max-width: 1199px) 
+{
+/*   .footerarea { font-size:medium;}
+   .footertext { font-size:medium;}      
+   .footertext p 	{ font-size: 14px;} 
+*/}
+
+/* Large */
+@media screen and (min-width: 1200px) 
+{
+/*   .footerarea { font-size:large;}
+   .footertext { font-size:large;}   
+   .footertext p 	{ font-size: 14px;} 
+*/
+}

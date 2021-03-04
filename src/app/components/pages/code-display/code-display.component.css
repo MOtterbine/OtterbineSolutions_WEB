@@ -1,0 +1,25 @@
+.boxes-container {
+
+    display: grid;
+    place-items: center;
+/*
+    width: 500px;
+    height: 100px;
+
+    background: lightblue;
+    resize: both;
+    border: 1px solid black;*/
+    overflow: auto;
+}
+.box {
+
+    padding: 2em .5em .5em .5em;
+    /*border-radius: 10px;
+    border: 1px solid rgb(1, 78, 90);
+    background: rgb(182, 255, 237);*/
+    color:rgb(58, 17, 17);
+    font-size: 1em;
+    text-align: center;
+
+}
+

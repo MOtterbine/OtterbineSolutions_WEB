@@ -1,0 +1,7 @@
+
+ErrorDocument 404 /notfound.html
+
+# End cache control #
+DirectoryIndex index.html
+
+

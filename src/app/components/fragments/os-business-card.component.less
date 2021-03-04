@@ -1,0 +1,110 @@
+@import url('src/constants.less');
+
+#business_card {
+    img{
+        height: 40px;
+        width: 40px;
+        float: right;
+    }
+
+    ul li {
+        font-size: 12px;
+        font-weight: 600;
+        list-style:inside;
+        list-style-type: none;
+        ::before{
+            content:"";
+            margin-bottom:30px;
+        }
+    }
+
+    ul{
+        h4{
+            margin-top: .3em;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+        h5{
+            margin-bottom: 1.8em;
+        }
+        height: 160px;
+        width:280px;
+        float:right;
+        margin:0;
+        padding: .8em;
+        border:1px solid grey;
+        background-color: #f9f9f9;
+        .allroundcorners(5px);
+    }
+    p{
+        font-weight: 500;
+        margin-bottom: .5em;
+    }
+  }
+
+
+      /* XSmall */
+      @media (max-width: 575px) {
+
+        #business_card ul{
+            height: 120px;
+            width:210px;
+            h4 {
+                margin-top: .0em;
+            }
+            h5{
+                margin-bottom:.7em;
+            }
+            li{
+                font-size: 10px;
+            }
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            //right:auto;
+            //left: auto;
+           // transform: translateX(50%);
+           // right: -50%;
+        }
+    }
+
+    /* Small */
+    @media (min-width: 576px) and (max-width: 767px) {
+
+        #business_card ul{
+            height: 120px;
+            width:210px;
+            h4 {
+                margin-top: .0em;
+            }
+            h5{
+                margin-bottom:.8em;
+            }
+            li{
+                font-size: 10px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+
+    /* Medium */
+    @media (min-width: 768px) and (max-width: 991px)    {
+    }
+
+    /* Large */
+    @media (min-width: 992px) and (max-width: 1199px) {
+    }
+
+   /* XLarge */
+   @media (min-width: 1200px)
+   {
+}

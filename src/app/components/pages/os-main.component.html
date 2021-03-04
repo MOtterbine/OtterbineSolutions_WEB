@@ -1,0 +1,52 @@
+
+<div class="home-body">
+
+
+
+
+
+
+    <div id="top-section" [hidden]="hide_top_section" [ngStyle]="styleClass" class="ts-offset">
+      <div id="top-section-content"  style="position: fixed;background-color: #fff;">
+        <app-os-face-summary ></app-os-face-summary>
+      </div>
+    </div>
+
+
+    <div  [hidden]='hide_section_1' class="row"  style="margin:0;">
+      <div  id="section-1" class="col-12" style="height:350px;padding-top:50px;border-top: 1px solid #000;">
+        <os-business-card [isHidden]='hide_section_1' [osLogoImage]='osLogoImage'></os-business-card>
+      </div>
+    </div>
+
+
+  <app-bottom-summary></app-bottom-summary>
+
+
+ <!-- <div [hidden]='hideStage2' style="height: 550px;background-color: rebeccapurple;color: #fff;">
+  <H1>Jammamy</H1>
+</div> -->
+
+
+    <!-- <div class="parallax2"></div> -->
+
+    <div *ngIf="showNasaFeed1;then nasaFeed1;else nasaAlt" >
+    </div>
+
+    <ng-template #nasaFeed1>
+      <!--div class="row">
+        <div class="col-sm-12" style="text-align:center;padding-top: 25px">
+          <h5 style="display: inline;">&ldquo;Feed1&rdquo;</h5>
+        </div>
+      </div-->
+    </ng-template>
+    <ng-template #nasaAlt>
+          <!--div class="row">
+          <div class="col-sm-12" style="text-align:center;padding-top: 25px">
+            <h5 style="display: inline;">&ldquo;Feed2&rdquo;</h5>
+          </div>
+        </div-->
+    </ng-template>
+
+</div>
+

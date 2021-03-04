@@ -1,0 +1,13 @@
+.btn, :visited {
+    outline: none;
+}
+p{
+    text-indent: .5em;
+}
+
+@media screen and (max-width: 576px) {
+
+    p {
+        font-size: 18px;
+    }
+}

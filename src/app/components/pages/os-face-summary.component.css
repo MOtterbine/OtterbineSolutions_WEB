@@ -1,0 +1,37 @@
+.os-face-summary{
+
+    text-align:left;
+}
+
+p{
+    text-indent: .3em;
+    margin:.5em 0 .5em 0;
+    line-height: 1.1em;
+}
+
+/* XSmall */
+@media (max-width: 575px) {
+    .user-img{
+        width: 50;
+        height: 50;
+    }
+    h5{
+        margin-top:15px;
+    }
+}
+
+/* Small */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/* Medium */
+@media (min-width: 768px) and (max-width: 991px)    {
+}
+
+/* Large */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large */
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row justify-content-center" style="margin: 0;">
+    <div id="top-section" class="col-md-8" >
+      <div class="card rounded0" style="margin-top:2em;margin-bottom: 5px;">
+        <div class="card-header">
+          <h4 class="mb-0">Log in</h4>
+        </div>
+        <div class="card-body">
+          <form id="login_form" class="form">
+            <div class="form-group">
+              <label for="">User</label>
+              <input (change)="validate()" (input)="validate()" [(ngModel)]="loginUserData.email"[(ngModel)]="loginUserData.email" name="email" placeholder="Me@Email.com"  type="email" class="form-control rounded0"  autocomplete="username" required>
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input (change)="validate()" (input)="validate()" [(ngModel)]="loginUserData.password" name="password" type="password" class="form-control rounded0" autocomplete="current-password" required>
+            </div>
+            <button (click)="loginUser()" class="btn btn-primary float-right " [disabled]="!isValidated">Login</button>
+            <div class="form-group">
+              <p [class]="messageTextClasses">{{messageText}}</p>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+      <div style="min-height: 24em;">
+        <p>This is a prototype login that uses an Amazon Lambda service between the application and a mongo database.</p>
+        <p>The aws service function (which I wrote) occasionally produces an error, and I'm not sure why. I'm working on it.</p>
+        <p>Credentials to test the login are:<br>User:'guest', Password:'1234'</p>
+     </div>
+     </div>
+ </div>
+</div>

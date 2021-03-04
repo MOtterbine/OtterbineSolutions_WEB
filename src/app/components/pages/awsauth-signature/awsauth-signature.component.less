@@ -1,0 +1,114 @@
+.card-body {
+
+    background-color: beige;
+}
+.card-text {
+
+    -webkit-touch-callout: unset;
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+
+ul {
+    margin-right:2em;
+    counter-reset: list;
+  }
+  ul > li {
+    list-style: none;
+  }
+  ul > li:before {
+      font-weight: 700;;
+    content: counter(list, decimal) ") ";
+    counter-increment: list;
+  }
+
+
+  textarea{
+
+      overflow:auto;
+
+  };
+
+
+p {
+    padding: 0 2em 0 2em;
+    text-indent: .3em;
+    text-align: left;
+
+}
+
+.card p {
+    padding: 0;
+}
+.card input[type="button"] {
+    //float:right;
+
+}
+
+
+
+
+.card input[type="button"]:focus {
+    text-decoration:none;
+    outline:none;
+    box-shadow: none;
+
+
+}
+
+.card {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.text-focus-point {
+    margin-left: 10%;
+    margin-right:10%;
+    text-indent: 0;
+}
+.text-focus-point-bold {
+    .text-focus-point;
+    font-weight: 700;
+}
+/*********************** BOOTSTRAP SIZING *******************************************/
+
+/* XSmall */
+@media screen and (max-width: 576px) {
+    textarea {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .card {
+        margin-left: .01em;
+        margin-right: .01em;
+    }
+    .text-focus-point {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    p{
+        padding-left:.5em;
+      //  margin-right: .2em;
+        padding-right:0;
+    }
+
+    ul, p {
+        padding-left: .5em;
+        margin-right: .5em;
+    }
+
+}
+
+/* Small */
+@media (min-width: 576px) and (max-width: 767px) {
+    textarea {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+}

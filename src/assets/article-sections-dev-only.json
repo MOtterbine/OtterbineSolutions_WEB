@@ -1,0 +1,543 @@
+{   
+    "top-stories":{
+        "title":"Top of The Pile",
+        "class":"text-big-head",
+        "articles":[
+            {
+                "title":"",
+                "shortText":"",
+                "class":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },
+            {
+                "title":"4.1% GDP - Anti-Trumpers Apoplectic",
+                "shortText":"Highest number since well before Obama",
+                "class":"text-good",
+                "body":"" ,
+                "url":"https://www.bloomberg.com/news/articles/2018-07-27/u-s-gdp-growth-hits-4-1-fastest-since-2014-in-win-for-trump",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "class":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "class":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "class":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "class":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            }        
+        ]
+    },
+    "tariff-wars":{
+        "title":"Trump's Trade War",
+        "class":"text-serious",
+        "articles":[
+            {
+                "title":"Another Hit",
+                "shortText":"Qualcomm’s $44 billion deal - Dead",
+                "body":"" ,
+                "class":"",
+                "url":"https://fox5sandiego.com/2018/07/25/china-kills-qualcomms-44-billion-deal-for-nxp/",
+                "image":""
+            },        
+            {
+                "title":"Casualties",
+                "shortText":"GM Falls Victim to Trump’s Trade War as Metal Prices Sink Profit",
+                "body":"" ,
+                "class":"news-highlight",
+                "url":"https://www.bloomberg.com/news/articles/2018-07-25/gm-cuts-profit-forecast-as-surging-metals-prices-boosts-costs",
+                "image":""
+            },
+            {
+                "title":"Farmers Worried",
+                "shortText":"Trump's $12B in aid for farmers 'welcome' but tariff worries linger in Illinois",
+                "class":"",
+                "body":"" ,
+                "url":"http://www.chicagotribune.com/business/ct-biz-illinois-soybean-farmers-tariffs-aid-20180725-story.html",
+                "image":""
+            },        
+            {
+                "title":"Reason",
+                "shortText":"Trump: 'No weakness' on tariff trade strategy, calls China 'vicious'",
+                "class":"",
+                "body":"" ,
+                "url":"https://www.washingtontimes.com/news/2018/jul/25/donald-trump-no-weakness-on-tariff-trade-strategy/",
+                "image":""
+            },        
+            {
+                "title":"The End Game: Less Tariffs?",
+                "shortText":"Trump touts EU trade concessions",
+                "class":"news-highlight",
+                "body":"" ,
+                "url":"https://www.reuters.com/article/us-usa-stocks/wall-st-rises-as-trump-touts-eu-trade-concessions-idUSKBN1KF1NQ",
+                "image":""
+            },        
+            {
+                "title":"A CEO's Perspective of the Battlefield",
+                "shortText":"Fiat Chrysler's New CEO Faces Twin Challenges: China And Tariffs",
+                "class":"",
+                "body":"" ,
+                "url":"https://www.npr.org/2018/07/25/632092653/fiat-chryslers-new-ceo-faces-twin-challenges-china-and-tariffs",
+                "image":""
+            }        
+        ]
+    },
+    "the-jack":{
+        "title":"The Jack",
+        "articles":[
+            {
+                "title":"Irrepressible Capitalism",
+                "class":"",
+                "shortText":"One year after massive takedowns, dark web marketplaces are thriving",
+                "body":"" ,
+                "url":"https://thenextweb.com/contributors/2018/07/21/dark-web-marketplaces-police-bitcoin/",
+                "image":""
+
+            },        
+            {
+                "title":"Citizen Peasants: In NYC",
+                "class":"news-highlight",
+                "shortText":"Because you will do what you are told by the progressive leaders of your community",
+                "body":"" ,
+                "url":"https://www.bloomberg.com/news/articles/2018-07-24/airbnb-s-nyc-bookings-could-be-cut-in-half-by-new-rule",
+                "image":""
+            },        
+            {
+                "title":"Police: He was standing his ground",
+                "shortText":"Accused of killing someone in a parking spot dispute",
+                "body":"" ,
+                "class":"",
+                "url":"https://www.washingtonpost.com/news/post-nation/wp/2018/07/21/hes-accused-of-killing-someone-in-a-parking-spot-dispute-authorities-say-he-was-standing-his-ground/?utm_term=.520c2aa392b1",
+                "image":""
+            },
+            {
+                "title":"NJ: Don't throw the 'Cop' out with the bath water",
+                "shortText":"High-capacity magazine ban also includes cops",
+                "class":"news-highlight",
+                "body":"" ,
+                "url":"https://www.nj.com/politics/index.ssf/2018/07/whoops_nj_lawmakers_look_to_fix_high_capacity_maga.html",
+                "image":""
+            },        
+            {
+                "title":"Comrads In Kansas",
+                "shortText":"Sanders, Ocasio-Cortez rally Democrats in deep-red Kansas",
+                "body":"" ,
+                "class":"",
+                "url":"https://apnews.com/adb409ee49cf43e38dcda8172f078542/Sanders,-Ocasio-Cortez-rally-Democrats-in-deep-red-Kansas",
+                "image":""
+            },        
+            {
+                "title":"Ohio State Doctor Accused of Misconduct",
+                "shortText":"More Than 100 Former Ohio State Students Allege Abuse By School Doctor",
+                "body":"" ,
+                "class":"",
+                "url":"https://www.npr.org/2018/07/20/630989904/more-than-100-former-ohio-state-students-allege-abuse-by-school-doctor",
+                "image":""
+            },        
+            {
+                "title":"Just Make It Free!",
+                "shortText":"Democratic socialism surging in the age of Trump",
+                "body":"" ,
+                "class":"",
+                "url":"https://apnews.com/a1770fd620d94bf58d0ff1035d3e0eea/Democratic-socialism-surging-in-the-age-of-Trump",
+                "image":""
+            },
+            {
+                "title":"NJ: Ever-Higher Taxes",
+                "shortText":"Forget your plans, Murphy's got better ideas for your hard-earned money",
+                "body":"" ,
+                "class":"",
+                "url":"https://www.nj.com/education/2018/07/murphy_school_funding_bill_nj_state_funding.html#incart_2box_nj-homepage-featured",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "class":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            }        
+
+        ]
+    },
+    "the-lack":{
+        "title":"The Lack", 
+        "articles":[
+            {
+                "title":"Social Security: Gonna' Get What You Give?",
+                "shortText":"Why nearly 1.7 million Americans will never receive Social Security",
+                "body":"" ,
+                "url":"https://www.msn.com/en-us/money/retirement/why-nearly-17-million-americans-will-never-receive-social-security/ar-BBKQIZ6",
+                "image":""
+            },        
+            {
+                "title":"America's Addiction: Debt",
+                "shortText":"Even so-called fiscal conservatives have dropped the ball.",
+                "body":"" ,
+                "class":"news-highlight",
+                "url":"https://www.usnews.com/news/the-report/articles/2018-07-20/americas-debt-dilemma",
+                "image":""
+            },        
+            {
+                "title":"Facebook Empire?",
+                "shortText":"Facebook forecast for slowing growth, rising expenses sends stock down 19 percent",
+                "body":"" ,
+                "url":"https://www.reuters.com/article/us-facebook-results/facebook-misses-estimates-on-monthly-active-users-idUSKBN1KF2U5",
+                "image":""
+            },
+            {
+                "title":"UK: Acid Assault on 3 Year Old",
+                "shortText":"Worcester ACID ATTACK: Boy, 3, seriously injured in 'PURE EVIL' assault -manhunt launched",
+                "class":"news-highlight",
+                "body":"" ,
+                "url":"https://www.express.co.uk/news/uk/992545/Worcester-acid-attack-boy-three-seriously-injured-burns-tallow-hill",
+                "image":""
+            },
+            {
+                "title":"Nicotine Fix: Causes Flight To Plummet",
+                "shortText":"Vaping co-pilot caused Air China plane to plummet, officials say",
+                "body":"" ,
+                "url":"https://www.cnn.com/2018/07/12/asia/air-china-smoking-pilots-intl/",
+                "image":""
+            },        
+            {
+                "title":"Stealing Weed",
+                "shortText":"Ex-postal employee admits he sniffed, poked holes in packages looking for weed",
+                "body":"" ,
+                "url":"https://www.nj.com/bergen/index.ssf/2018/07/ex-postal_employee_admits_he_sniffed_poked_holes_i.html",
+                "image":""
+            },        
+            {
+                "title":"Fortunes of Socialism",
+                "shortText":"Dying botanical garden highlights Venezuela's decay",
+                "body":"" ,
+                "url":"https://www.reuters.com/news/picture/dying-botanical-garden-highlights-venezu-idUSRTX6CRWL",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            }       
+        ]
+    },
+    "the-wack":{
+        "title":"The Wack",
+        "articles":[
+            {
+                "title":"Starbucks: This Cup Represents Colorado",
+                "shortText":"Starbucks' Colorado 'Been There' coffee mug sparks controversy",
+                "body":"" ,
+                "class":"",
+                "url":"https://www.thedenverchannel.com/news/360/starbucks-colorado-been-there-coffee-mug-sparks-controversy",
+                "image":""
+            },
+            {
+                "title":"California Utopia - Not All That",
+                "shortText":"With violent crime up on BART, officials struggle to reassure riders",
+                "class":"",
+                "body":"" ,
+                "url":"https://www.sfgate.com/crime/article/With-violent-crime-up-on-BART-officials-struggle-13101989.php?t=3fe1481b44",
+                "image":""
+            },
+            {
+                "title":"Hyperbole in Philly",
+                "shortText":"The same ol' tired narrative",
+                "body":"" ,
+                "class":"",
+                "url":"http://www.philly.com/philly/news/100-women-dressed-as-handmaids-to-protest-pence-in-philly-20180722.html",
+                "image":""
+            },        
+            {
+                "title":"It's Too Hot - Something's Wrong. Right?",
+                "shortText":"Climate change industry still strong.",
+                "body":"" ,
+                "class":"",
+                "url":"https://www.msn.com/en-us/weather/topstories/climate-change-is-supercharging-a-hot-and-dangerous-summer/ar-BBL6YSh",
+                "image":""
+            },        
+            {
+                "title":"Ancient Energy Drink?",
+                "shortText":"Thousands sign petition to drink red juice from bottom of black sarcophagus",
+                "body":"" ,
+                "url":"https://www.yahoo.com/news/thousands-sign-petition-drink-red-193115649.html",
+                "image":""
+            },        
+            {
+                "title":"Parkland Survivors' Father Killed",
+                "shortText":"Father of 2 Parkland shooting survivors fatally shot during armed robbery",
+                "class":"",
+                "body":"" ,
+                "url":"https://www.yahoo.com/news/father-2-parkland-shooting-survivors-163542365.html",
+                "image":""
+            },        
+            {
+                "title":"Miami Beach Mandates Sex Assault Panic Buttons",
+                "shortText":"Miami Beach hotel housekeepers to get panic buttons",
+                "body":"" ,
+                "class":"news-highlight",
+                "url":"https://www.miamiherald.com/news/business/article215379285.html",
+                "image":""
+            },        
+            {
+                "title":"Maxine: Doing God's Work",
+                "shortText":"Maxine Waters sent by God to get Trump",
+                "body":"" ,
+                "url":"https://www.rt.com/usa/434248-maxine-waters-sent-by-god/",
+                "image":""
+            },        
+            {
+                "title":"Look Ma! I'm Not Dead!",
+                "shortText":"2-year-old boy ruins his own funeral",
+                "body":"" ,
+                "url":"https://www.heraldsun.com.au/archive/news/dead-boy-wakes-up-and-asks-for-water-at-own-funeral-in-brazil/news-story/8f58a1f4e873f7c667a54ab866c92444",
+                "image":""
+            }        
+        ]
+    },
+    "inspiration":{
+        "title":"Inspiration and Awe",
+        "articles":[
+            {
+                "title":"Good News For McDonald's",
+                "shortText":"McDonald's global same-restaurant sales beat estimates",
+                "body":"" ,
+                "url":"https://www.reuters.com/article/us-mcdonalds-results/mcdonalds-global-same-restaurant-sales-beat-estimates-idUSKBN1KG1KS?il=0",
+                "image":""
+            },        
+            {
+                "title":"Mars: A Lake",
+                "shortText":"Large Underground Lake Detected Below Mars Ice Cap, Study Says",
+                "body":"" ,
+                "class":"news-highlight",
+                "url":"https://weather.com/science/space/news/2018-07-25-mars-water-underground-lake-under-southern-pole-ice-cap",
+                "image":""
+            },
+            {
+                "title":"Tiny and Harsh Jellyfish Swimming in NJ Waters",
+                "shortText":"Jellyfish, now found in NJ, can pack a mighty sting",
+                "body":"" ,
+                "url":"http://www.philly.com/philly/health/environment/dime-sized-clinging-jellyfish-now-found-in-nj-can-pack-a-mighty-sting-20180718.html",
+                "image":""
+            },        
+            {
+                "title":"Cats Under The Stars",
+                "shortText":"Mountain lions hang out on man's porch",
+                "body":"" ,
+                "url":"https://fox5sandiego.com/2018/07/26/man-records-four-mountain-lions-hanging-out-on-his-porch/",
+                "image":""
+            },        
+            {
+                "title":"What You Might Earn",
+                "shortText":"Man walks all night to first day of work, CEO gifts him car as thanks",
+                "body":"" ,
+                "url":"https://www.cbsnews.com/news/walter-carr-walks-to-first-day-of-work-ceo-gifts-him-car/",
+                "image":""
+            },        
+            {
+                "title":"A Dog's Hero Reputation",
+                "shortText":"After Husky saves deaf hiker on Alaska trail, others come forward saying he rescued them, too",
+                "body":"" ,
+                "url":"https://www.cbsnews.com/news/husky-saves-deaf-hiker-on-alaska-trail-others-come-forward-saying-he-rescued-them-too/",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            }        
+        ]
+    },
+    "the-race":{
+        "title":"Getting Under Your Skin",
+        "articles":[
+            {
+                "title":"Chicago Police Cam Shows Suspect was Armed",
+                "shortText":"REVEALED: Police body cam shows man shot dead by a Chicago police officer was armed with a GUN, as his death sparks violent clashes with cops and protesters in the city's South Shore",
+                "body":"" ,
+                "url":"http://www.dailymail.co.uk/news/article-5956507/Police-body-cam-shows-Harith-Augustus-shot-dead-Chicago-cop-armed-GUN-sparking-protests.html",
+                "image":""
+            },        
+            {
+                "title":"Bodies Exhumed from Late 1800's",
+                "shortText":"Tens of bodies exhumed in Texas likely those of black inmates",
+                "body":"" ,
+                "url":"https://www.cbsnews.com/news/bodies-black-inmates-who-worked-on-plantations-exhumed-fort-bend-county-texas-sugar-land/",
+                "image":""
+            },
+            {
+                "title":"Shaky Grounds for Calling the Cops?",
+                "shortText":"Trump-supporting white CVS manager dubbed 'Coupon Carl' calls police on a black customer because he didn't recognize the voucher she was trying to use",
+                "body":"" ,
+                "url":"http://www.dailymail.co.uk/news/article-5956011/White-CVS-manager-dubbed-Coupon-Carl-calls-police-black-woman-fraudulent-coupon.html",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            }       
+        ]
+    },
+    "the-invasion":{
+        "title":"Culture and Identity",
+        "articles":[
+            {
+                "title":"Generation X and The Economy",
+                "shortText":"Generation X Alone in Fully Recovering From Great Recession",
+                "body":"" ,
+                "url":"https://www.usnews.com/news/data-mine/articles/2018-07-24/generation-x-alone-in-fully-recovering-from-great-recession",
+                "image":""
+            },        
+            {
+                "title":"Another Judge Speaks",
+                "shortText":"Judge temporarily halts deportation of reunified families",
+                "body":"" ,
+                "url":"https://abcnews.go.com/Politics/wireStory/aclu-asks-judge-slow-deportations-reunified-families-56621475?cid=clicksource_4380645_1_hero_headlines_headlines_hed",
+                "image":""
+            },        
+            {
+                "title":"Immigration to Britain: lowest in 5 years",
+                "shortText":"Net immigration to Britain from the EU falls to the lowest level for five years but still adds 100,000 to population",
+                "body":"" ,
+                "url":"http://www.dailymail.co.uk/news/article-5958151/Net-immigration-Britain-hit-282-000-year.html",
+                "image":""
+            },        
+            {
+                "title":"San Francisco: Citizens Need Not Vote",
+                "class":"news-highlight",
+                "shortText":"",
+                "body":"In San Francisco, non-citizens to vote in Board of Education elections" ,
+                "url":"http://thehill.com/homenews/state-watch/397801-san-francisco-registers-non-citizens-to-vote-in-board-of-education",
+                "image":""
+            },        
+            {
+            
+                "title":"13 Year Old Beheaded for being a Witness",
+                "shortText":"Investigator: Girl was beheaded after seeing grandmother die",
+                "body":"" ,
+                "url":"https://abcnews.go.com/US/wireStory/investigator-girl-beheaded-grandmother-die-56593420",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"",
+                "shortText":"",
+                "body":"" ,
+                "url":"",
+                "image":""
+            },        
+            {
+                "title":"Low-Hanging Fruit",
+                "shortText":"New Jersey attorney general responds to 'turban man' comment",
+                "body":"" ,
+                "url":"https://apnews.com/5d8f58fc9ac54493a6bbd6aa5eddc59b/New-Jersey-attorney-general-responds-to-'turban-man'-comment",
+                "class":"",
+                "image":""
+            }        
+        ]
+    }
+
+}
+

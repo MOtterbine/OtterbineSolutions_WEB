@@ -1,0 +1,378 @@
+@import url('constants.less');
+
+@keyframes glag {
+  //    0% { opacity: 0; width:1px; bottom:155px;left:340px;}
+  //    100%   { opacity: 1; width:45px; bottom:85px;left:321px;}
+      0% { opacity: 0; scale: .1;}
+    //   60%   { opacity: 0; }
+      100%   { opacity:1; scale: 1;}
+  }
+
+
+@keyframes fadein {
+  //    0% { opacity: 0; width:1px; bottom:155px;left:340px;}
+  //    100%   { opacity: 1; width:45px; bottom:85px;left:321px;}
+      0% { opacity: 0; }
+    //   60%   { opacity: 0; }
+      100%   { opacity:1;}
+  }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    0% { opacity: 0; }
+  //  60%   { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+  //  60%   { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    0% { opacity: 0; }
+  //  60%   { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    0% { opacity: 0; }
+   // 60%   { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+
+
+@keyframes fadeout {
+//    0% { opacity: 0; width:1px; bottom:155px;left:340px;}
+//    100%   { opacity: 1; width:45px; bottom:85px;left:321px;}
+    0% { opacity: 1; }
+ //   60%   { opacity: 0; }
+    100%   { opacity:0;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    0% { opacity: 1; }
+  //  60%   { opacity: 0; }
+    100%   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    0% { opacity: 1; }
+  //  60%   { opacity: 0; }
+    100%   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    0% { opacity: 1; }
+  //  60%   { opacity: 0; }
+    100%   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    0% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+
+
+
+
+.custom-animation(@arg1, @arg2, @arg3, @arg4, @arg5 ){
+    -webkit-animation: @arg1 @arg2 @arg3 @arg4 @arg5;
+    -moz-animation: @arg1 @arg2 @arg3 @arg4 @arg5;
+    -ms-animation: @arg1 @arg2 @arg3 @arg4 @arg5;
+    -o-animation: @arg1 @arg2 @arg3 @arg4 @arg5;
+    animation: @arg1 @arg2 @arg3 @arg4 @arg5;
+ }
+ .custom-animation1(@arg1, @arg2, @arg3, @arg4 ){
+    -webkit-animation: @arg1 @arg2 @arg3 @arg4 ;
+    -moz-animation: @arg1 @arg2 @arg3 @arg4 ;
+    -ms-animation: @arg1 @arg2 @arg3 @arg4 ;
+    -o-animation: @arg1 @arg2 @arg3 @arg4 ;
+    animation: @arg1 @arg2 @arg3 @arg4 ;
+ }
+ .custom-animation(@arg1, @arg2){
+    -webkit-animation: @arg1 @arg2;/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: @arg1 @arg2;/* Firefox < 16 */
+    -ms-animation: @arg1 @arg2;/* Internet Explorer */
+    -o-animation: @arg1 @arg2; /* Opera < 12.1 */
+    animation: @arg1 @arg2;
+ }
+
+
+
+
+
+.floater{
+  .custom-animation(floater, 3s);
+
+}
+
+
+.fade-in{
+  .custom-animation(fadein, 3s);
+      animation-fill-mode: forwards;
+
+}
+.fade-in-long{
+  .custom-animation(fadein, 6s);
+      animation-fill-mode: forwards;
+
+}
+.fade-in1{
+     .custom-animation1(fadein, 3s, linear, 2s);
+    animation-fill-mode: forwards;
+}
+.fade-in2{
+     .custom-animation1(fadein, 3s, linear, 4s);
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes verticalCollapse {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+ @keyframes verticalExpand {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+
+
+ @keyframes verticalClose {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+ @keyframes verticalOpen {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.verticalOpen {
+    .custom-animation(.7s, ease, 0s, 1, verticalOpen  );
+       animation-fill-mode: forwards;
+
+}
+
+.verticalClose {
+    .custom-animation(.7s, ease, 0s, 1, verticalClose );
+   animation-fill-mode: forwards;
+
+}
+
+
+.jam {
+  animation: verticalClose 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes verticalFrationalOffset {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+.ts-offset1 {
+   animation: verticalFrationalOffset 1s linear infinite;
+   animation-play-state: paused;
+   animation-delay: calc((var(--scroll) * -1s));
+  // animation-delay: calc(.5 * -1s);
+}
+
+ @keyframes bounce-background {
+  0% {
+    background-position-y:50%;
+  }
+  50% {
+    background-position-y:51%;
+  }
+  100% {
+    background-position-y:50%;
+  }
+}
+
+.bounce-background {
+    .custom-animation(8s, ease, 0s, infinite, bounce-background );
+   animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes fading {
+  0% { opacity: 0; transform: scale(.3); }
+  50%   { opacity: .8; }
+  100%   { opacity:0; transform: scale(1.2);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fading {
+0% { opacity: 0; transform: scale(.3); }
+50%   { opacity: .8; }
+100%   { opacity:0; transform: scale(1.2);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fading {
+0% { opacity: 0; transform: scale(.3); }
+50%   { opacity: .8; }
+100%   { opacity:0; transform: scale(1.2);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fading {
+0% { opacity: 0; transform: scale(.3); }
+50%   { opacity: .8; }
+100%   { opacity:0; transform: scale(1.2);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fading {
+0% { opacity: 0; transform: scale(.3); }
+50%   { opacity: .8; }
+100%   { opacity:0; transform: scale(1.2);}
+}
+
+
+.fading{
+-webkit-animation: fading 5s infinite; /* Safari 4.0 - 8.0 */
+animation: fading 5s infinite;
+//.custom-animation-fade(fadeout, 4s);
+}
+
+
+
+
+@keyframes size-in {
+  0% { opacity: 0; transform: scale(.1); }
+  50%   { opacity: .8; }
+  100%   { opacity:.8; transform: scale(.9);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes size-in {
+  0% { opacity: 0; transform: scale(.1); }
+  50%   { opacity: .8; }
+100%   { opacity:.8; transform: scale(.9);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes size-in {
+  0% { opacity: 0; transform: scale(.1); }
+  50%   { opacity: .8; }
+100%   { opacity:.8; transform: scale(.9);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes size-in {
+  0% { opacity: 0; transform: scale(.1); }
+  50%   { opacity: .8; }
+100%   { opacity:.8; transform: scale(.9);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes size-in {
+  0% { opacity: 0; transform: scale(.1); }
+  50%   { opacity: .8; }
+  100%   { opacity:.8; transform: scale(.9);}
+}
+
+
+.size-in{
+  -webkit-animation: size-in 5s 1; /* Safari 4.0 - 8.0 */
+  animation: size-in 5s 1;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes size-in-then-go {
+  0% { opacity: 0; transform: scale(.1); visibility:visible;}
+  75%   { opacity:0.9; transform: scale(1.1);}
+  100%   { opacity:1.0; transform: scale(.9);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes size-in-then-go {
+  0% { opacity: 0; transform: scale(.1); visibility:visible;}
+  75%   { opacity:0.9; transform: scale(1.1);}
+  100%   { opacity:1.0; transform: scale(.9);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes size-in-then-go {
+  0% { opacity: 0; transform: scale(.1); visibility:visible;}
+  75%   { opacity:0.9; transform: scale(1.1);}
+  100%   { opacity:1.0; transform: scale(.9);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes size-in-then-go {
+  0% { opacity: 0; transform: scale(.1); visibility:visible;}
+  75%   { opacity:0.9; transform: scale(1.1);}
+  100%   { opacity:1.0; transform: scale(1.0);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes size-in-then-go {
+  0% { opacity: 0; transform: scale(.1); visibility:visible;}
+  75%   { opacity:0.9; transform: scale(1.1);}
+  100%   { opacity:1.0; transform: scale(1.0);}
+}
+
+// .size-in-then-go{
+//   -webkit-animation: size-in-then-go 2s 1; /* Safari 4.0 - 8.0 */
+//   animation: size-in-then-go 2s 1;
+//   animation-fill-mode: forwards;
+// }
+.size-in-then-go {
+  -webkit-animation: size-in-then-go 2s 1; /* Safari 4.0 - 8.0 */
+  animation: size-in-then-go 2s 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-delay: 700ms;
+}
+

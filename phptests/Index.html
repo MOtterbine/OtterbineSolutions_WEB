@@ -1,0 +1,73 @@
+<?php
+// Call PHP Script from javascript
+
+$mydata='Variables declaration in PHP';
+echo $mydata;
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+  <meta charset="utf-8" />
+  <title>Otterbine Solutions | Mike Otterbine | Technology Portfolio</title>
+  <meta name="description" content="This Angular site was designed by software engineer Mike Otterbine in a nodejs environment. This website is a professional portfolio. Applications include desktop c++, c# (wpf/mvvm) as well as web-based applications.">
+  <base href="/">
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/index.min.js" type="javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale = 1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <meta name="description" content="Mike Otterbine | Otterbine Solutions Home Page"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="http://www.OtterbineSolutions.com/">
+
+  <!--external logins-->
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122457009-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122457009-1');
+  </script>
+<link rel="stylesheet" href="styles.89cbf3e83db6ecd43f44.css"></head>
+<body>
+  <app-root></app-root>
+  <!-- <a (click)="onSignIn()" class="nav-link">kit</a>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <script>
+          function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+  </script> -->
+
+  <script src="./assets/js/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+  <script src="./assets/js/crypto-js/3.1.9-1/hmac-sha256.min.js"></script>
+  <script src="./assets/js/crypto-js/3.1.9-1/enc-base64.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-sha256.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-base64.min.js"></script> -->
+  <script src="./assets/js/sha.js"></script>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.d69267efc995d07ee0a4.js"></script><script type="text/javascript" src="scripts.866fb13518ab64417a0b.js"></script><script type="text/javascript" src="main.228ec6ba40c62a61520c.js"></script></body>
+</html>
+
+<script type="text/javascript">
+	console.log("<?php echo $mydata?>");
+</script>
+
+

@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+@dark-background:#010101;
+@footer-height:180px;
+@taro-red:#a41233;
+@taro-dark-background:#353535;
+@taro-gold:#b69644;
+@med-blue:#1696ff;
+
+
+@std-text-color:#434343;
+
+@text-serious:#85000b;
+@text-bad:#c00010;
+@text-good:#0b8600;
+@text-important:#001866;
+@text-color-blue:#009db6;
+@full-page-fluid-margin:2.6em;
+
+
+// a, a:visited{
+//     color: @std-text-color;
+//     text-decoration:none;
+// }
+
+
+
+
+.text-serious{
+    font-weight: 600;
+    color:@text-serious;
+    p,a,a:hover, a:visited{
+        color:@text-serious;
+        font-weight: 600;
+    }
+}
+.text-bad{
+    color:@text-bad;
+    font-weight: 800;
+    p,a,a:hover, a:visited{
+        color:@text-bad;
+        font-weight: 800;
+    }
+}
+.text-good{
+    color:@text-good;
+    font-weight: 800;
+    p,a,a:hover, a:visited{
+        color:@text-good;
+        font-weight: 800;
+    // transform: scale(2.1);
+    }
+}
+.text-important{
+    color:@text-important;
+    font-weight: 900;
+    p,a,a:hover, a:visited{
+        color:@text-important;
+        font-weight: 900;
+    }
+}
+.text-big-head{
+    text-shadow:1px 1px 3px #999;
+    p,a,a:hover, a:visited{
+        text-shadow:1px 1px 3px #999;
+
+    }
+}
+
+
+.allroundcorners(@radius)
+{
+    border-radius: @radius ;
+   -moz-border-radius: @radius;
+   -webkit-border-radius: @radius;
+}
+.leftroundcorners(@radius)
+{
+    border-radius: @radius 1px 1px @radius;
+   -moz-border-radius: @radius 1px 1px @radius;
+   -webkit-border-radius: @radius 1px 1px @radius;
+}
+.caption-text{
+	font-family:"Josefin+Sans";
+	font-weight:800;
+}
+
+.header-title{
+	font-family:"Oswald";
+	font-weight:600;
+	letter-spacing:1px
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    img, svg{
+        pointer-events: none;
+    }
+}
+
+
+/**** FONTS ****/
+/*
+@font-face {
+    font-family: CoffeeHouse;
+    src: url('../fonts/PhillySans.otf');
+}
+@font-face {
+    font-family: Jammer;
+    src: url('../fonts/Jammer.ttf');
+}
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/Futura Book font.ttf');
+}
+*/
+/*#footer-spacer{
+    height:@footer-height;
+}
+*/
+
+
+/************MIXINS***********************/
+.allroundcorners(@radius)
+{
+    border-radius: @radius ;
+   -moz-border-radius: @radius;
+   -webkit-border-radius: @radius;
+
+}
+
+.bottom-round-corners(@radius)
+{
+    border-radius: 0 0 @radius @radius ;
+   -moz-border-radius: 0 0 @radius @radius ;
+   -webkit-border-radius: 0 0 @radius @radius ;
+
+}
+
+.vertical-symmetric-grad2(@TopBottom, @Middle) {
+    background: @TopBottom; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@TopBottom, @Middle, @Middle, @TopBottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@TopBottom, @Middle, @Middle, @TopBottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@TopBottom, @Middle, @Middle, @TopBottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@TopBottom, @Middle, @Middle, @TopBottom); /* Standard syntax */
+}
+.vertical-symmetric-grad(@TopBottom, @Middle) {
+    background: @TopBottom; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@TopBottom, @Middle, @TopBottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@TopBottom, @Middle, @TopBottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@TopBottom, @Middle, @TopBottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@TopBottom, @Middle, @TopBottom); /* Standard syntax */
+}
+.vertical-grad(@Top, @Bottom) {
+    background: @Top; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@Top, @Bottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@Top, @Bottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@Top, @Bottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@Top, @Bottom); /* Standard syntax */
+}
+
+.diag-grad(@Top, @Bottom) {
+    background: @Top;
+    background: -webkit-linear-gradient(to bottom right, @Top, @Bottom);
+    background: -o-linear-gradient(to bottom right, @Top, @Bottom);
+    background: -moz-linear-gradient(to bottom right, @Top, @Bottom);
+    background: linear-gradient(to bottom right, @Top, @Bottom);
+}
+
+
+
+
+.vertical-grad2(@Top, @Bottom) {
+    background: @Top; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@Top, @Top, @Bottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@Top, @Top, @Bottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@Top, @Top, @Bottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@Top, @Top, @Bottom); /* Standard syntax */
+}
+.vertical-grad-concentrated-top(@Top, @Bottom) {
+    background: @Top; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@Top, @Bottom 95%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@Top, @Bottom 95%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@Top, @Bottom 95%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@Top, @Bottom 95%); /* Standard syntax */
+}
+
+
+
+.horizontal-grad(@Left, @Right) {
+    background: @Left; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to right, @Left, @Right); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to right, @Left, @Right); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to right, @Left, @Right); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, @Left, @Right); /* Standard syntax */
+}
+.horizontal-grad2(@Left, @center, @Right) {
+    background: @Left; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to right, @Left, @center, @Right); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to right, @Left, @center, @Right); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to right, @Left, @center, @Right); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, @Left, @center, @Right); /* Standard syntax */
+}
+

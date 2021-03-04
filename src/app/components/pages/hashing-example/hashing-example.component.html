@@ -1,0 +1,40 @@
+<div id="section-1" class="container" style="height:auto;min-height: 400px;padding-bottom: 25px;">
+  <h3 class="text-center">Data Hashing Example</h3>
+
+
+  <div class="card text-left" style="display: normal;margin-top:30px;">
+    <div class="card-body">
+      <h5 class="card-title" style="display: inline-block;">Encoding Plain Text</h5>
+      <h6 class="card-subtitle mb-2 text-muted">text to encode</h6>
+      <p id="scripts-text" class="card-text" style="display: flex;flex-flow:row;">
+        <textarea placeholder="Any text you want to encode..." rows="3" wrap="off" style="width: 100%;height:auto;resize: none;" [(ngModel)]="textToEncode"></textarea>
+      </p>
+
+
+
+
+
+      <input (change)="onChangeUseKey($event)" [(ngModel)]="useKey" type="checkbox" title="Use a key" style="margin:0 5px 0 0;padding:0;" >Check this box if you want to individualize the output with a key you specify (any text)
+
+
+      <p id="scripts-text" class="card-text" style="display: flex;flex-flow:row;">
+        <textarea placeholder="Your Own Personal Key" rows="1" wrap="on" style="width: 100%;height:auto;resize: none;" [(ngModel)]="keyToEncode"></textarea>
+      </p>
+
+      <select (change)="onChangeAlgorithm($event)"  [(ngModel)]="selectedEncodeType"   style="margin-right: 10px;vertical-align: middle;">
+        <option *ngFor="let algoritm of encodeTypes" [ngValue]="algoritm.name">{{algoritm.name}}</option>
+      </select><br>
+      <input type="button" value="Encode" class="btn btn-primary btn-default" (click)="Encode()">
+      <input type="button" value="Clear" class="btn btn-primary btn-default" (click)="Clear()">
+
+
+      <h6 class="card-subtitle mb-2 mt-3 text-muted">output</h6>
+      <p id="scripts-text" class="card-text" style="display: flex;flex-flow:row;">
+        <textarea rows="4" wrap="on" style="width: 100%;height:auto;resize: none;" disabled>{{encodedText}}</textarea>
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>My email is MikeOtterbine@gmail.com or Mike@OtterbineSolutions.com - feel free to contact me with any insights or comments.</p>
+  <br>
+  </div>

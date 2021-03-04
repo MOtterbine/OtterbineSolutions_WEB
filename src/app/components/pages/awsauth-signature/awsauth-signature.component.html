@@ -1,0 +1,146 @@
+<div id="section-1" class="container" style="height:auto;min-height: 1000px;padding-bottom: 25px;">
+  <h5 class="text-center">AWS IAM Authentication Signature Example (Javascript)</h5>
+  <p class="text-center" style="margin-bottom: 2em;">(Signature Version 4)</p>
+  <p>So, I found myself in need of a place to host an api service. I turned to <a href="https://aws.amazon.com/" title="Amazon Web Services" target="_blank">AWS</a> and setup an api trigger in a Lambda function. I wanted to use AWS's IAM authentication (V.4 by the way). In order to do that, an authentication signature must be created for every request. Signing the outgoing request is a matter of placing the 'signature' string into the request's 'Authorization' header.</p>
+  <p>AWS does provide <a href="https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post" title="Signature Version 4 signing examples" target="_blank">documentation and python examples</a> to create the IAM authentication signature. However, getting a good response from signatures I had created proved more difficult than it at first seemed. The issue for me was that I was working with different hashing resources, a different language and some maddening disparities in different http transport objects. The AWS examples are in Python.</p>
+  <p>It cannot be stressed enough that you must setup a way to read the responses from the service as you set about to execute and debug this functionality. Authentication errors will prevent a request from reaching your specific service, but the server response may indicate what is wrong with your request; if your time is offset, if you signature doesn't match their calculations or other signature-related failures.</p>
+  <p>I struggled with this over the course of many days, periodically checking with <a href="https://www.postman.com/" title="Postman.com" target="_blank">Postman</a> - which seemed to taunt me by effortlessly connecting to my api via IAM authentication. Consequently, it is imperative to establish your service/api is operating as expected.</p>
+  <p class="text-focus-point-bold" >Be mindful of CORS issues. Postman works fine to establish basic functionality, but then a page may trip over CORS errors when attempting to asynchronously access the service.</p>
+  <p>My initial use case employed a POST request. But, this example applies to any method. Additionally, this example uses AWS's api gateway which requires the service be configured to use IAM authentication. Furthermore, different AWS services such as EC2, S3 etc. may require additional headers or have variations in the format of the signature.</p>
+  <p>I found, a simple test could be put together in a single, basic html file- which I outline below.</p>
+  <p>You will need to calculate SHA256 values to assemble IAM authentication signatures. My example makes use of  the CryptoJS ('crypto-js') library.</p>
+
+
+
+
+
+  <div class="card text-left" style="display: normal;">
+    <div class="card-body">
+      <h5 class="card-title" style="display: inline-block;">Imported scripts</h5>
+      <h6 class="card-subtitle mb-2 text-muted">crypto-js libraries</h6>
+      <p id="scripts-text" class="card-text">
+        <textarea rows="3" wrap="off" style="width: 100%;height:auto;resize: none;" disabled="true">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/hmac-sha256.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/enc-base64.min.js"></script></textarea>
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <p></p>
+  <ul><H5>The Core Signing Function and 3 pieces of data</H5>
+  <li><b>AWS_SERVICE_URL</b>   - the url of the service with the 'https://' part of the url exluded. Also, any query parameters are also excluded.
+  <p  class="text-focus-point" style="padding-bottom: 0;margin-bottom: 0;">(for example, "https://123456789.execute-api.us-east-2.amazonaws.com/default" would be: '123456789.execute-api.us-east-2.amazonaws.com/default')</p></li>
+  <li><b>IAMUser_AccessKey</b> - The IAM user's known access key</li>
+  <li><b>IAMUser_Secret</b>    - The IAM user's secret key</li>
+  </ul>
+  <div class="card text-left" style="display: normal;">
+    <div class="card-body">
+      <h5 class="card-title" style="display: inline-block;">Main Signing Method</h5>
+      <h6 class="card-subtitle mb-2 text-muted">create an AWS IAM authentication signature using Javascript</h6>
+      <p id="scripts-text" class="card-text">
+        <textarea rows="47" wrap="off" style="width: 100%;resize: none;" disabled="true">
+  function BuildIAMAuthSignedHeader(payload) {
+      // hash on the payload
+      let payloadHash = String(CryptoJS.SHA256(payload));
+
+      // DATE AND TIME - must be utc and in a specific format (i.e. 20210104T173911Z)
+      let now = new Date();
+      let dateStamp = now.getUTCFullYear() + this.pad((now.getUTCMonth() +1),2) + this.pad(now.getUTCDate(),2);
+      let reqDate = dateStamp + "T" + this.pad(now.getUTCHours(), 2) +
+                    this.pad(now.getUTCMinutes(), 2) + this.pad(now.getUTCSeconds(), 2) + "Z";
+
+      let HTTPRequestMethod = "POST";
+      let CanonicalURI = "/default";
+      let CanonicalQueryString = "";
+      let CanonicalHeaders =  "content-type:application/json;charset=utf-8\n" +
+                              "host:" + AWS_SERVICE_URL +"\n" +
+                              "x-amz-date:" + reqDate + "\n";
+      let SignedHeaders = "content-type;host;x-amz-date";
+      let CredentialScope = dateStamp + "/" + region + "/" + service + "/aws4_request";
+      let CanonicalRequest =
+          HTTPRequestMethod + '\n' +
+          CanonicalURI + '\n' +
+          CanonicalQueryString + '\n' +
+          CanonicalHeaders + '\n' +
+          SignedHeaders + '\n' +
+          payloadHash;
+
+      let StringToSign = algorithm + "\n" +
+          reqDate + "\n" +
+          CredentialScope + "\n" +
+          CryptoJS.SHA256(CanonicalRequest);
+
+      console.log("StringToSign:","\n" + StringToSign + "\n");
+
+      let derivedSigningKey = getSignatureKey(IAMUser_Secret,dateStamp,region,service);
+
+      let signature =  CryptoJS.HmacSHA256(StringToSign, derivedSigningKey );
+
+      let finalAuthHeader = algorithm + " Credential=" + IAMUser_AccessKey + "/" + CredentialScope +
+                            ", SignedHeaders=" + SignedHeaders + ", Signature=" + signature;
+
+      return {
+          'x-amz-date':reqDate,
+          'Accept': 'application/json',
+          'content-type': 'application/json;charset=utf-8',
+          'Authorization': finalAuthHeader
+      };
+  }</textarea>
+        </p>
+    </div>
+  </div>
+  <br>
+  <p>The next illustration shows how the asynchronous request is executed and how it is signed.</p>
+  <div class="card text-left" style="display: normal;">
+    <div class="card-body">
+      <h5 class="card-title" style="display: inline-block;">Using The Signing Method</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Using a fetch asynchronous call</h6>
+      <p id="scripts-text" class="card-text">
+        <textarea rows="19" wrap="off" style="width: 100%;resize: none;" disabled="true">function callService() {
+      const otherParam={
+          method:'POST',
+          url: "https://" + AWS_SERVICE_URL,
+          contentType:"application/json;charset=utf-8",
+          body: payload,
+          headers: BuildIAMAuthSignedHeader(payload)
+      };
+
+      return fetch("https://" + AWS_SERVICE_URL, otherParam)
+          .then(res=> res.json())
+          .then(data=>{
+              if(data) console.log("Response: " + data);
+              else console.log("None, or bad response.");
+          })
+          .catch(error=>{
+              console.log(error.statusText);
+          });
+  }</textarea>
+        </p>
+    </div>
+  </div>
+  <br>
+  <p>And, finally some simple markup to call the request from the page. Of course, it's easy enough to display the condition of the request using jquery or via the document object. </p>
+  <div class="card text-left" style="display: normal;">
+    <div class="card-body">
+      <h5 class="card-title" style="display: inline-block;">Making an IAM-Authenticated Rest Call</h5>
+      <h6 class="card-subtitle mb-2 text-muted">signing a POST request</h6>
+      <p id="scripts-text" class="card-text">
+        <textarea rows="3" wrap="off" style="width: 100%;resize: none;" disabled="true">
+    <p>Click to call service</p>
+    <input type="button" value="Go" onclick="callService()">
+    <H3 id="page_message">loading...</H3></textarea>
+        </p>
+    </div>
+  </div>
+
+
+
+
+<br>
+<p><b>Some Final Thoughts...</b></p>
+<p>I'm having difficulty getting this to work with either Angular's HttpClient, or with JQuery's .ajax methods - with the fetch method working everytime. The error is an AWS response indicating a signing calculation mismatch. Furthermore, I'm having difficulty getting fetch to work with Angular's built-in http interceptor (which works with HttpCient and $.ajax). So, I'm searching for that answer. I suspect it's a text encoding issue - to be continued.</p>
+<p>My email is MikeOtterbine@gmail.com or Mike@OtterbineSolutions.com - feel free to contact me with any insights or comments.</p>
+<br>
+</div>

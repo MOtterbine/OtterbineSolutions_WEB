@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Otterbine Solutions | Mike Otterbine</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale = 1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="description" content="Mike Otterbine's porfolio page."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="http://www.OtterbineSolutions.com/">
+
+</head>
+<style>
+html,body{
+    font-family:helvetica;
+    text-align:center;
+  /*  background-color:skyblue;*/
+    padding:1em 5% 1em 5%;
+    word-wrap:break-word;
+}
+input[type="button"]{
+    cursor:pointer;
+}
+
+.error-page{
+    color:darkblue;
+}
+.url-text{
+
+    color:maroon;
+}
+</style>
+<body >
+<div class="error-page">
+    <H4>The following page :</H4>
+    <b><H4 class="url-text"><script>document.write(window.location.href)</script></b></H4>
+    <H4>doesn't exist, or is unavailable right now</H4>
+    <input class="btn" type="button" value="Go Home" title="Go Home" onclick="GoHome()"/>
+</div>
+</body>
+</html>
+<script>
+
+function GoHome(){
+    window.location.href = "";
+
+}
+
+</script>

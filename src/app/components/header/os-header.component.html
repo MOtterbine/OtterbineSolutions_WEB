@@ -1,0 +1,145 @@
+<div class="container-fluid" style="margin: 0;padding:0;">
+  <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+<div id="header" class="jam">
+  <div class="header-boxes-container">
+    <div class="box">
+      <a href="/" title="Mike Otterbine Portfolio Page">
+        <div class="page-logo">
+          <img src="{{headerLogoSource}}" alt="Mike Otterbine's Logo">
+        </div>
+      </a>
+    </div>
+
+    <div class="boxm d-none d-md-block">
+      <div class="banner-text-wrapper">
+        <div class="item1">
+          <div id="banner-block" class="banner-block fade-in-long">
+            <H4 id="fading-words-display">{{bannerTitle}}</H4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="right-menu-box ">
+    <div  id="menu-toggle-button">
+      <div class="" style="display: inline-block;">
+        <!-- <a routerLink="/login" *ngIf="!_authService.loggedIn()" routerLinkActive="active" class="nav-link">Login</a>
+        <a routerLink="/register" *ngIf="!_authService.loggedIn()" routerLinkActive="active" class="nav-link">Register</a> -->
+        <a (click)="_authService.logoutUser();"  *ngIf="_authService.loggedIn()" class="nav-link" style="cursor: pointer;">Log out</a>
+      </div>
+
+      <div class="navbar-toggle" (click)="ToggleNavBar()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+  <div>
+
+  </div>
+
+  <div id="sidebar-wrapper">
+      <p style="text-align: center;font-size:x-small;"><a href="https://www.otterbinesolutions.com">www.OtterbineSolutions.com</a></p>
+      <h5 class="left"><br>Website Links:</h5>
+  <nav>
+      <a [routerLink]="['/Home']" title="Home Page" (click)="ToggleNavBar()">Home</a>
+      <a [routerLink]="['/CodeDisplay','AwsAuthSignatureExample']" title="IAM Authentication signing example"  (click)="ToggleNavBar()">IAM Signature Example</a>
+      <a [routerLink]="['/ODB2AppDownload']" title="Download page for experimental ODB2 Application" (click)="ToggleNavBar()">ODB2 App Download</a>
+      <a [routerLink]="['/CodeDisplay','HashingExample']" title="Hash Example" (click)="ToggleNavBar()">Hashing Example</a>
+      <a [routerLink]="['/login']" *ngIf="!_authService.loggedIn()"  title="Login Page" (click)="ToggleNavBar()">Login (prototype)</a>
+      <a href="" *ngIf="_authService.loggedIn()" title="Logout user;" (click)="_authService.logoutUser();ToggleNavBar();">Log out</a>
+      <!-- <li><a [routerLink]="['/login']" *ngIf="!_authService.loggedIn()" (click)="ToggleNavBar()" style="display: block;">Login</a></li> -->
+      <!-- <li><a [routerLink]="['/Register']" *ngIf="!_authService.loggedIn()" routerLinkActive="active" class="nav-link">Login (prototype)</a></li> -->
+      <a href='https://github.com/MOtterbine' title="Opens My Github Page in a new tab." target="_blank" (click)="ToggleNavBar()">My GitHub Page</a>
+
+  </nav>
+    <p style="position: absolute;bottom:10px;right:0;left:0;font-size: 14px;line-height: 1.5em;text-align: center;cursor: pointer;" (click)="ToggleNavBar()">Close</p>
+  </div>
+
+</div>
+</div>
+
+
+
+<script>
+
+
+  var wordShown = 0;
+
+function SetupChangingHeaderText(){
+
+  var x = document.getElementById("banner-block");
+
+  // Code for Chrome, Safari and Opera
+  x.addEventListener("webkitAnimationIteration", myEndFunction);
+  // Standard syntax
+  x.addEventListener("animationiteration", myEndFunction);
+
+
+  function myEndFunction() {
+    console.log("Jammer...");
+    switch(wordShown)    {
+      case 0:
+        $("#fading-words-display").text("Solving Interesting Problems");
+        wordShown++;
+        break;
+      case 1:
+        $("#fading-words-display").text("Finding The Best Solutions");
+        wordShown++;
+        break;
+      case 2:
+        $("#fading-words-display").text("Asking The Right Questions");
+        wordShown++;
+        break;
+      case 3:
+        $("#fading-words-display").text("Dedication");
+        wordShown++;
+        break;
+      case 4:
+        $("#fading-words-display").text("Integrity");
+        wordShown++;
+        break;
+      case 5:
+        $("#fading-words-display").text("Customized Because You're Unique");
+        wordShown++;
+        break;
+      case 6:
+        $("#fading-words-display").text("Excellence and Pride");
+        wordShown = 0;
+        break;
+
+    }
+        //console.log("it happened...");
+  }
+}
+$(document).ready(function()
+{
+  SetupChangingHeaderText();
+
+})
+
+
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+
+
+
+</script>
