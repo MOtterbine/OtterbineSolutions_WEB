@@ -1,0 +1,9 @@
+-Create email verification for registration
+-Find what's causing the Chrome password warning
+-create email password reset
+-Use interceptor for auth signing.
+-music.otterbinesolutions.com
+-key storage issues
+-auth token cross-site issues
+-Set Server time stamp to UTC in email messages
+-Embed crypto functions
